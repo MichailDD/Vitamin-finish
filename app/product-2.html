@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+@@include('components/each-page-blocks/_head.html', {
+'lang':'en',
+'css': './css/product.min.css',
+'title': 'Product'
+})
+
+<body class="product">
+	<div class="wrapper">
+		@@include('components/each-page-blocks/_header.html')
+		<main class="product">
+			@@include('./components/_quiz.html')
+			@@include('./components/cart/cart.html')
+			<div class="product__body">
+				@@include('./components/product/left-block.html', {
+				'image': '22',
+				'modify': 'blue'
+				})
+				@@include('./components/product/right-block.html', {
+				'label': 'Pain Relief',
+				'labelModify' : 'blue',
+				'title': 'Metagenics Acute Phase',
+				'iconRow': {
+				'image': 'bottle_02',
+				'subtitle': '9 Packets',
+				'text': '4.8 ounces plastic can'
+				},
+				'addToCart': {
+				'fullPrice': '$61.98',
+				}
+				})
+			</div>
+			<section class="cards">
+				<h4 class="cards__title">You may also like</h4>
+				<div class="cards__body">
+					@@loop('./components/catalog/card-item.html', './json/product-card-item.json')
+				</div>
+			</section>
+		</main>
+		@@include('components/each-page-blocks/_footer.html')
+	</div>
+	@@include('components/each-page-blocks/_scripts.html')
+</body>
+
+</html>

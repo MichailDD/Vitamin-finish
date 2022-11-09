@@ -1,0 +1,55 @@
+<div class="payment">
+	<h3 class="payment__title main-title">Payment methods</h3>
+	<div class="payment__items payment__items_mobile">
+		<div class="payment__line">
+			<label for="card-number">Card Number</label>
+			<input id="card-number" type="text" value="6477 1693 3042 6031">
+		</div>
+		<div class="payment__double-line">
+			<div class="payment__line">
+				<label for="card-expiration">Expiration</label>
+				<input id="card-expiration" type="text" value="12/21">
+			</div>
+			<div class="payment__line">
+				<label for="card-cvc">CVC</label>
+				<input id="card-cvc" type="password" value="111">
+			</div>
+		</div>
+	</div>
+	<div class="payment__items payment__items_desktop">
+		<div class="payment__top-item">
+			<div class="payment__number">
+				<label for="desktop-number">Card Number</label>
+				<input id="desktop-number" type="text" value="6477 1693 3042 6031">
+			</div>
+			<div class="payment__logos">
+				<div class='payment__image'>
+					<picture>
+						<source type='image/webp' srcset='@img/logos/stripe.webp'>
+						<img src='@img/logos/stripe.png' alt='stripe logo'>
+					</picture>
+				</div>
+				<div class='payment__image'>
+					<picture>
+						<source type='image/webp' srcset='@img/logos/5in1.webp'>
+						<img src='@img/logos/5in1.png' alt='companies logo'>
+					</picture>
+				</div>
+			</div>
+			<div class="payment__expiration">
+				<label for="desktop-expiration">Expiration</label>
+				<input id="desktop-expiration" type="text" value="12/21">
+			</div>
+		</div>
+		<div class="payment__bottom-item">
+			<div class="payment__decor"></div>
+			<div class="payment__cvc">
+				<label for="desktop-cvc">CVC</label>
+				<input id="desktop-cvc" type="password" value="111">
+			</div>
+		</div>
+	</div>
+	@@include('../_btn.html', {
+	'text': 'Save'
+	})
+</div>

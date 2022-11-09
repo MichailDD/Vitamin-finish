@@ -1,0 +1,24 @@
+@import "./default/variables";
+@import "./default/null";
+@import "./default/mixins";
+@import "./default/functions";
+@import "./default/fonts";
+@import "./default/global";
+
+//Подключение общих стилей
+@import "./components/header";
+@import "./components/footer";
+
+// Подключение других стилей
+@import "./default/text";
+@import "./components/btn";
+@import "./components/product/add-to-cart";
+@import "./components/product/item-icon-row";
+@import "./components/product/left-block";
+@import "./components/product/right-block";
+@import "./components/quiz";
+@import "./components/cart/cart";
+@import "./components/cart/cart-item";
+
+//Подключение стилей конкретной страницы
+@import "./pages/product-discount";

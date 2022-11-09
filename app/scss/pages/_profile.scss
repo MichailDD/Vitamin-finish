@@ -1,0 +1,104 @@
+body.profile {
+   .header {
+      padding-top: 2px;
+   }
+   .footer {
+      padding-top: 41px;
+      @media (min-width: 1000px) {
+         padding-top: 70px;
+      }
+   }
+   .profile {
+      // .profile__body
+      &__body {
+         padding-top: 120px;
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-bottom: 60px;
+         @media (min-width: 1000px) {
+            padding-top: 160px;
+            padding-bottom: 100px;
+            display: flex;
+            column-gap: percent(100, 1394);
+            padding-left: percent(50, 1800);
+            padding-right: percent(50, 1800);
+         }
+         @media (min-width: 1400px) {
+            column-gap: percent(178, 1394);
+            padding-left: percent(202, 1800);
+            padding-right: percent(202, 1800);
+            padding-bottom: 95px; // Orders PXP
+         }
+      }
+
+      .main-title {
+         font-weight: 500;
+         @include fl(24, 28.94);
+         margin-bottom: 30px;
+         @media (min-width: 468px) {
+            @include fl(26, 32);
+         }
+         @media (min-width: 760px) {
+            @include fl(28, 35);
+         }
+         @media (min-width: 1000px) {
+            margin-bottom: 40px;
+            @include fl(30, 38);
+         }
+         @media (min-width: 1400px) {
+            @include fl(32, 41);
+         }
+         @media (min-width: 1600px) {
+            @include fl(36, 43.42);
+         }
+      }
+      // .profile__:
+      &__subscriptions,
+      &__orders,
+      &__account-overview,
+      &__payment-methods,
+      &__change-password {
+         display: none;
+         @media (min-width: 1000px) {
+            flex: 1 1 auto;
+         }
+         &.active {
+            display: block;
+         }
+      }
+   }
+   .sidebar {
+      @media (min-width: 1000px) {
+         position: relative;
+         top: 7px;
+      }
+      // .sidebar__list
+      &__list {
+         display: none;
+         @media (min-width: 1001px) {
+            display: block;
+         }
+         li {
+            white-space: nowrap;
+            @media (min-width: 1000px) {
+               cursor: pointer;
+               @include fl(22, 40);
+               &.active {
+                  font-weight: 700;
+               }
+               &:not(:last-child) {
+                  margin-bottom: 30px;
+               }
+               &:last-child {
+                  color: #d32d2c;
+               }
+            }
+            @media (max-width: 1000px) {
+               &:not(li.active) {
+                  display: none;
+               }
+            }
+         }
+      }
+   }
+}

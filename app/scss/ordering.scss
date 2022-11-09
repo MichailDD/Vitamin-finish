@@ -1,0 +1,20 @@
+@import "./default/variables";
+@import "./default/null";
+@import "./default/mixins";
+@import "./default/functions";
+@import "./default/fonts";
+@import "./default/global";
+
+//Подключение общих стилей
+@import "./components/header";
+@import "./components/footer";
+
+// Подключение других стилей
+@import "./default/text";
+@import "./components/btn";
+@import "./components/ordering/ordering-form";
+@import "./components/ordering/ordering-item";
+@import "./components/ordering/order-done";
+
+//Подключение стилей конкретной страницы
+@import "./pages/ordering";

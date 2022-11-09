@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+@@include('components/each-page-blocks/_head.html', {
+'lang':'en',
+'css': './css/catalog.min.css',
+'title': 'Catalog'
+})
+
+<body class="catalog">
+	<div class="wrapper">
+		@@include('components/each-page-blocks/_header.html')
+		<main class="catalog">
+			@@include('./components/_quiz.html')
+			@@include('./components/cart/cart.html')
+			@@include('./components/catalog/banner.html')
+			<div class="catalog__body">
+				<aside class="catalog__menu">
+					<ul class="catalog__list">
+						<li class="active">
+							<p>All categories</p>
+							<i class="ic-arrow-orange-down"></i>
+						</li>
+						<li>Vitamins & Dietary Supplements</li>
+						<li>Weight Loss</li>
+						<li>Minerals</li>
+						<li>Antioxidants</li>
+						<li>Probiotics</li>
+						<li>Pain Relief</li>
+						<li>Prenatal Vitamins</li>
+						<li>Sale%</li>
+					</ul>
+				</aside>
+				<section class="products">
+					<div class="products__body">
+						@@loop('./components/catalog/card-item.html', './json/catalog-card-item.json')
+					</div>
+					<div class="products__button">
+						<p>View more</p>
+						<i class="ic-arrow-orange-down"></i>
+					</div>
+
+				</section>
+			</div>
+			<section class="banner">
+				<div class="banner__slide banner__slide_3">
+					<div class="banner__slide-body">
+						<svg width="320" height="220" viewBox="0 0 320 220" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<g opacity="0.1">
+								<path
+									d="M58.4138 -58.917C58.4138 -114.687 103.953 -160 160.001 -160C216.049 -160 261.588 -114.687 261.588 -58.917V0.338547H203.205V-58.917C203.205 -82.6192 183.822 -101.906 160.001 -101.906C136.181 -101.906 116.797 -82.6192 116.797 -58.917V0.338547H58.4138V-58.917Z"
+									fill="#DAD3FF" />
+								<path
+									d="M261.606 0.338547V59.9276C261.606 116.011 216.058 161.579 160 161.579C103.942 161.579 58.3942 116.011 58.3942 59.9276V0.338547H0V59.9276C0 148.259 71.708 220 160 220C248.292 220 320 148.259 320 59.9276V0.338547H261.606Z"
+									fill="#DAD3FF" />
+								<path
+									d="M116.825 0.338547H203.174V60.1244C203.174 84.0387 183.804 103.498 159.999 103.498C136.195 103.498 116.825 84.0387 116.825 60.1244V0.338547Z"
+									fill="#DAD3FF" />
+							</g>
+						</svg>
+						<div class="banner__content">
+							<h4 class="banner__sublabel">You may also like</h4>
+							<h2 class="banner__title">Pain Relief Products</h2>
+							<p class="banner__text">
+								Answer a few simple questions and automatically get a
+								personalazed list of vitamins in minutes
+							</p>
+							@@include('./components/_btn.html', {
+							'text': 'View category'
+							})
+						</div>
+						<div class="banner__images">
+							<div class="banner__image">
+								<picture>
+									<source type="image/webp" srcset="@img/gallery/banner_03.webp">
+									<img src="@img/gallery/banner_03.jpg" alt="banner image">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="comments">
+				<h3 class="comments__title">What healthy and happy customer says</h3>
+				<div class="swiper comments__slider">
+					<div class="swiper-wrapper comments__items">
+						@@loop('./components/_comment.html', './json/comments.json')
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('components/each-page-blocks/_footer.html')
+	</div>
+	@@include('components/each-page-blocks/_scripts.html')
+</body>
+
+</html>

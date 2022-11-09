@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+@@include('components/each-page-blocks/_head.html', {
+'lang':'en',
+'css': './css/sign-in.min.css',
+'title': 'Sign-in'
+})
+
+<body class="sign-in">
+	<div class="wrapper">
+		@@include('./components/other/_account-header.html')
+		<main class="sign-in">
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__body">
+
+						<h2 class="hero__title">Sign in with email</h2>
+						<p class="hero__text">Please enter your e-mail and password:</p>
+						<form action="#" class="hero__form">
+							<p>
+								<input type="text" class="hero__email" placeholder="Email">
+							</p>
+							<p>
+								<input type="password" class="hero__email" placeholder="Password">
+								<a class="hero__pass" href="#">Forgot password?</a>
+							</p>
+							@@include('./components/_btn.html', {
+							'text': 'Sign in'
+							})
+							<div class="hero__decor">
+								<span></span>
+								<a class="hero__link" href="#">or sign in with...</a>
+								<span></span>
+							</div>
+						</form>
+						@@include('./components/sign-up/icons-row.html')
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/other/_account-footer.html', {
+		'text': "Don't have an account?",
+		'link': 'Create one',
+		'location': 'sign-up.html'
+		})
+	</div>
+	@@include('components/each-page-blocks/_scripts.html')
+</body>
+
+</html>

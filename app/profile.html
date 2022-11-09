@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+@@include('components/each-page-blocks/_head.html', {
+'lang':'en',
+'css': './css/profile.min.css',
+'title': 'Profile'
+})
+
+<body class="profile">
+	<div class="wrapper">
+		@@include('components/each-page-blocks/_header.html')
+		<main class="profile">
+			@@include('./components/_quiz.html')
+			@@include('./components/cart/cart.html')
+			<div class="profile__body">
+				<aside class="profile__sidebar sidebar">
+					<nav class="sidebar__menu">
+						<ul class="sidebar__list">
+							<li id="subscriptions" class="active">Subscriptions</li>
+							<li id="orders" class="">Orders</li>
+							<li id="account" class="">Account Overview</li>
+							<li id="payment" class="">Payment methods</li>
+							<li id="password" class="">Change Password</li>
+							<li id="out" class="">Sign out</li>
+						</ul>
+					</nav>
+
+				</aside>
+				<section class="profile__subscriptions active">
+					@@include('./components/profile/subscriptions.html')
+
+				</section>
+				<section class="profile__orders">
+					@@include('./components/profile/orders.html')
+
+				</section>
+				<section class="profile__account-overview">
+					@@include('./components/profile/account-overview.html')
+
+				</section>
+				<section class="profile__payment-methods">
+					@@include('./components/profile/payment-methods.html')
+
+				</section>
+				<section class="profile__change-password">
+					@@include('./components/profile/change-password.html')
+				</section>
+			</div>
+		</main>
+		@@include('components/each-page-blocks/_footer.html')
+	</div>
+	@@include('components/each-page-blocks/_scripts.html')
+</body>
+
+</html>

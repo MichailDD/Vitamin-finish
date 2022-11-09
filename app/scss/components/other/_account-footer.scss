@@ -1,0 +1,80 @@
+.account-footer {
+	padding-top: 41px;
+	padding-bottom: 40px;
+	@media (min-width: 569px) {
+		padding-top: 46px;
+		padding-bottom: 38px;
+	}
+	position: relative;
+	&__container {
+		text-align: center;
+		font-family: $ff2;
+	}
+	&__decor {
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			opacity: 0.07;
+			background-color: #000;
+			@media (min-width: 769px) {
+				display: none;
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translate(2px, 0);
+		@media (min-width: 769px) {
+			transform: translate(-2px, 0);
+		}
+	}
+	&__text {
+		@include fl(14, 19.07);
+		margin-right: 4px;
+		@media (min-width: 769px) {
+			@include fl(16, 21.79);
+		}
+	}
+	a {
+		@include fl(15, 20.43);
+		color: $orange;
+		@media (min-width: 769px) {
+			@include fl(16, 21.79);
+		}
+	}
+}
+body.hide-content {
+	.account-footer {
+		padding-top: 20px;
+		padding-bottom: 80px;
+		@media (min-width: 769px) {
+			padding-bottom: 39px;
+		}
+		&__decor {
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
+body.pass-recovery {
+	.account-footer {
+		padding-top: 19px;
+		// padding-bottom: 80px;
+		@media (min-width: 769px) {
+			// padding-bottom: 39px;
+			padding-bottom: 12px;
+		}
+		&__decor {
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
